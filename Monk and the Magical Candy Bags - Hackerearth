@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+ 
+        multiset<long long> bags;
+        for(int i=0; i<n; i++)
+        {
+            long long candie;
+            cin>>candie;
+            bags.insert(candie);
+        }
+        long long total_candies = 0;
+ 
+        for(int i=0; i<k; i++)
+        {
+            auto last_it = bags.end();
+            --last_it;
+            long long candy_cnt = *(last_it);
+ 
+            total_candies += candy_cnt;
+            bags.erase(last_it);
+            bags.insert(*last_it/2);
+        }
+        cout<<total_candies<<endl;
+    }
+}
