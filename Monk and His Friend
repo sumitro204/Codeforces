@@ -1,0 +1,39 @@
+//// The Solution is Partially Accepted ///
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+
+
+    while(t--){
+        long long x,y;
+        cin>>x>>y;
+
+        multiset<long long> s;
+
+        for(long long i=0; i<x; i++){
+            long long k;
+            cin>>k;
+            s.insert(k);
+        }
+
+        for(long long i=0; i<y; i++){
+            long long n;
+            cin>>n;
+            auto it = s.find(n);
+
+            if(it != s.end()){
+                cout<<"YES"<<endl;
+            }
+            else{
+                cout<<"NO"<<endl;
+            }
+        }
+    }
+}
+
