@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    long long N, X;
+    cin>>N>>X;
+
+     set<long long>s;
+     for(int i=0; i<N; i++){
+        int m;
+        cin>>m;
+        s.insert(m);
+     }
+      
+      int cnt = s.size();
+      if(cnt==X){
+        cout<<"Good"<<endl;
+      }
+      else if(cnt<X){
+        cout<<"Bad"<<endl;
+      }
+      else{
+        cout<<"Average"<<endl;
+      }
+    }
+}
