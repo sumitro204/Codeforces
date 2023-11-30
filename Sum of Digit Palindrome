@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int sum = 0;
+
+    for(auto c : s){
+        sum += (c-'0');
+    }
+    string tem = to_string(sum);
+
+    string tem2;
+    tem2 = tem;
+    reverse(tem2.begin(), tem2.end());
+
+    if(tem2 == tem){
+        cout<<1<<endl;
+    }
+    else{
+        cout<<0<<endl;
+    }
+}
