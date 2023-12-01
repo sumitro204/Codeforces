@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long int t;
+    cin>>t;
+    string s;
+    int tem;
+
+    for(long long int i=0; i<t; i++){
+        cin>>s;
+
+        if(s =="abc" || s=="acb" || s == "bac" || s == "cba"){
+            cout<<"YES"<<endl;
+        }
+        else {
+            cout<<"NO"<<endl;
+        }
+    }
+
+    }
